@@ -1,1 +1,145 @@
+{
+  "student_metadata": {
+    "name": "Aryan Soni",
+    "roll_number": "230049",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part A",
+    "submission_date": "2026-03-01"
+  },
 
+  "llm_tools_used": [
+    {
+      "tool_name": "Claude",
+      "model": "Claude Sonnet 4",
+      "provider": "Anthropic"
+    }
+  ],
+
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-01",
+      "tool_name": "Claude",
+      "model": "Claude Sonnet 4",
+      "purpose": "Understanding a systematic process for selecting a valid paper under all Part A constraints",
+      "prompt": "What systematic process should I follow to select a valid GMM-based paper under the Part A constraints?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Outlined a structured filtering approach: first verify venue and year, then confirm methodological alignment, check dataset accessibility, test CPU feasibility, and finally confirm uniqueness on the live sheet. This prevented random searching.",
+      "student_verification": "I matched each step against the official Part A document and rubric — CORE A* venue, 2009–2012 year range, CPU-only feasibility, and uniqueness requirement all aligned exactly.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-01",
+      "tool_name": "Claude",
+      "model": "Claude Sonnet 4",
+      "purpose": "Generating concrete GMM candidate papers within CORE A* venues (2009–2012)",
+      "prompt": "List CORE A* (2009–2012) papers whose primary contribution is GMM, EM-based clustering, or a Bayesian nonparametric mixture variant.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested several candidates including Kulis & Jordan (ICML 2012), Infinite SVM (ICML 2011), and Mixtures of Factor Analyzers (PAMI 2010). This reduced manual browsing effort.",
+      "student_verification": "Independently checked ICML 2012 proceedings and confirmed 'Revisiting k-means: New Algorithms via Bayesian Nonparametrics' is officially published at ICML 2012. Verified ICML is CORE A* in the CORE2010 ranking list.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-01",
+      "tool_name": "Claude",
+      "model": "Claude Sonnet 4",
+      "purpose": "Comparing GMM, SVM, and time-series options before committing",
+      "prompt": "Compare strong candidates across GMM, SVM, and time-series (2009–2012 CORE A*) in terms of reproducibility, methodological clarity, and modern relevance.",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Provided a comparative breakdown showing that DP-means (Kulis & Jordan) balances theoretical novelty, clean objective function, and easy reproduction compared to heavier latent SVM or GP state-space models.",
+      "student_verification": "I reviewed abstracts and method sections of the suggested SVM and GP papers. GP state-space models required heavier inference machinery, while DP-means had a clearly defined objective and simple iterative updates.",
+      "confidence_level": 4
+    },
+    {
+      "interaction_id": 4,
+      "date": "2026-03-01",
+      "tool_name": "Claude",
+      "model": "Claude Sonnet 4",
+      "purpose": "Evaluating modern relevance before finalizing selection",
+      "prompt": "Among these shortlisted papers, which ideas are still actively used or cited in recent research (2022–2024)?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Explained that DP-means remains relevant in nonparametric clustering and automatic model selection literature, especially where adaptive cluster counts are needed.",
+      "student_verification": "Checked Google Scholar for recent citations of Kulis & Jordan and found 2022–2024 papers referencing DP-means and small-variance asymptotics in clustering research.",
+      "confidence_level": 4
+    },
+    {
+      "interaction_id": 5,
+      "date": "2026-03-01",
+      "tool_name": "Claude",
+      "model": "Claude Sonnet 4",
+      "purpose": "Testing computational feasibility for CPU-only reproduction",
+      "prompt": "Can DP-means from Kulis & Jordan (ICML 2012) be implemented and tested on a small dataset using only NumPy or scikit-learn on a standard laptop?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Confirmed that DP-means reduces to a modified k-means objective with a penalty parameter lambda, making it lightweight and CPU-friendly.",
+      "student_verification": "Read Section 3 of the ICML paper and confirmed the small-variance asymptotic derivation leads to a simple iterative update rule. This can be implemented similarly to k-means with an additional cluster-creation condition.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 6,
+      "date": "2026-03-01",
+      "tool_name": "Claude",
+      "model": "Claude Sonnet 4",
+      "purpose": "Verifying acceptance status and compliance with publication rules",
+      "prompt": "The exam states arXiv-only papers are not allowed. Is Kulis & Jordan formally published and not just a preprint?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Clarified that the arXiv version (1111.0352) is a preprint, but the accepted version is officially published in ICML 2012 proceedings.",
+      "student_verification": "Opened the official ICML 2012 proceedings PDF (icml.cc/2012/papers/291.pdf) and confirmed publication details. This ensured compliance with the acceptance-status constraint.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 7,
+      "date": "2026-03-01",
+      "tool_name": "Claude",
+      "model": "Claude Sonnet 4",
+      "purpose": "Rubric-level compliance audit before submission",
+      "prompt": "Check whether my selected paper and disclosure satisfy every evaluation criterion listed in Part A.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Walked through venue validity, year range, method alignment, dataset feasibility, compute limits, and disclosure completeness.",
+      "student_verification": "Re-read the evaluation table in the Part A document and confirmed that venue (ICML), year (2012), method (GMM variant), reproducibility (CPU-only feasible), and disclosure structure all meet the stated requirements.",
+      "confidence_level": 5
+    }
+  ],
+
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 3,
+      "prompt": "Compare strong candidates across GMM, SVM, and time-series (2009–2012 CORE A*) in terms of reproducibility, methodological clarity, and modern relevance.",
+      "why_important": "This comparison prevented premature commitment and forced evaluation across all allowed method categories. It clarified that DP-means offers a balance of theoretical depth and practical reproducibility."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 5,
+      "prompt": "Can DP-means from Kulis & Jordan (ICML 2012) be implemented and tested on a small dataset using only NumPy or scikit-learn on a standard laptop?",
+      "why_important": "Directly addressed the CPU-only reproducibility constraint, which is a major scoring component in Part A."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 6,
+      "prompt": "The exam states arXiv-only papers are not allowed. Is Kulis & Jordan formally published and not just a preprint?",
+      "why_important": "Ensured compliance with the acceptance-status rule and prevented accidental disqualification."
+    },
+    {
+      "rank": 4,
+      "interaction_id": 4,
+      "prompt": "Among these shortlisted papers, which ideas are still actively used or cited in recent research (2022–2024)?",
+      "why_important": "Established modern relevance, strengthening justification for selecting DP-means over alternatives."
+    },
+    {
+      "rank": 5,
+      "interaction_id": 1,
+      "prompt": "What systematic process should I follow to select a valid GMM-based paper under the Part A constraints?",
+      "why_important": "Provided a structured decision framework that guided the entire selection process rather than relying on ad-hoc searching."
+    }
+  ],
+
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Part A.",
+    "understanding_acknowledged": true,
+    "signature": "Aryan Soni",
+    "date": "2026-03-01"
+  }
+}
