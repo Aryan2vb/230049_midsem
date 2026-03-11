@@ -1,0 +1,69 @@
+{
+  "student_metadata": {
+    "name": "ARYAN SONI",
+    "roll_number": "230049",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-12"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "provider": "Anthropic"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Structuring the 4-page report",
+      "prompt": "How should I structure a 4-page report synthesising DP-means reproduction, ablation findings, and failure mode analysis within the page limit?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested page-by-page outline matching the rubric criteria.",
+      "student_verification": "Compared against the rubric to ensure all 5 sub-items (summary, reproduction, ablations, failure, reflection) are covered.",
+      "confidence_level": 4,
+      "task_tag": "Task 4.1",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Writing the honest reflection section",
+      "prompt": "What should I include in the honest reflection section of my report about what I could not implement and what surprised me during the DP-means reproduction?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested focusing on lambda sensitivity and the absence of real-world dataset experiments.",
+      "student_verification": "Wrote the reflection in my own words based on actual observations during implementation.",
+      "confidence_level": 3,
+      "task_tag": "Task 4.1",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "How should I structure a 4-page report synthesising DP-means reproduction, ablation findings, and failure mode analysis within the page limit?",
+      "why_important": "Report structure determines whether all rubric criteria are covered within the page limit."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 2,
+      "prompt": "What should I include in the honest reflection section of my report about what I could not implement and what surprised me during the DP-means reproduction?",
+      "why_important": "The reflection must match actual results \u2014 this interaction helped identify what was genuinely surprising vs expected."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this task.",
+    "understanding_acknowledged": true,
+    "signature": "ARYAN SONI",
+    "date": "2026-03-12"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "student_metadata": {
+    "name": "ARYAN SONI",
+    "roll_number": "230049",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-12"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "provider": "Anthropic"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Choosing the failure mode dataset",
+      "prompt": "What dataset would best demonstrate a failure mode of DP-means that is directly tied to one of its core assumptions, and is easy to visualise?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested make_moons as it directly violates the spherical cluster assumption with clear visual failure.",
+      "student_verification": "Confirmed the failure by running DP-means on make_moons across multiple lambda values \u2014 no lambda worked.",
+      "confidence_level": 5,
+      "task_tag": "Task 3.2",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Connecting failure to assumptions",
+      "prompt": "How does the DP-means failure on make_moons connect to Equation 9 in the paper and the spherical cluster assumption?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Traced the connection: Eq. 9 uses squared Euclidean distance which produces Voronoi partitions incompatible with crescent geometry.",
+      "student_verification": "Re-read Section 4 Eq. 9 and verified the covariance structure implied by the objective function.",
+      "confidence_level": 5,
+      "task_tag": "Task 3.2",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Suggesting a concrete fix",
+      "prompt": "What is a concrete one-sentence modification to DP-means that would address the non-spherical cluster failure mode?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested kernelised DP-means with RBF kernel as the fix.",
+      "student_verification": "Checked that this is mentioned as future work in the paper \u2014 it is referenced in Section 6.",
+      "confidence_level": 4,
+      "task_tag": "Task 3.2",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 2,
+      "prompt": "How does the DP-means failure on make_moons connect to Equation 9 in the paper and the spherical cluster assumption?",
+      "why_important": "Linking the failure to a specific equation in the paper is worth 7 of 15 marks in Task 3.2 \u2014 this was the most important connection to get right."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 1,
+      "prompt": "What dataset would best demonstrate a failure mode of DP-means that is directly tied to one of its core assumptions, and is easy to visualise?",
+      "why_important": "Dataset choice for the failure mode determines whether the loop with Task 1.2 assumptions is cleanly closed."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 3,
+      "prompt": "What is a concrete one-sentence modification to DP-means that would address the non-spherical cluster failure mode?",
+      "why_important": "The suggested fix is required by the rubric \u2014 getting a specific, implementable suggestion was important."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this task.",
+    "understanding_acknowledged": true,
+    "signature": "ARYAN SONI",
+    "date": "2026-03-12"
+  }
+}

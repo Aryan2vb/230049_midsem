@@ -1,0 +1,90 @@
+{
+  "student_metadata": {
+    "name": "ARYAN SONI",
+    "roll_number": "230049",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-12"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "provider": "Anthropic"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Choosing two components to ablate",
+      "prompt": "What are the two most important components of DP-means from Algorithm 1 to ablate, and how should I implement each ablation independently?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested lambda=inf (ablate new-cluster rule) and single-pass (ablate iterative update) as the two cleanest ablations.",
+      "student_verification": "Verified that both ablations are truly independent and tie back to specific lines in Algorithm 1.",
+      "confidence_level": 5,
+      "task_tag": "Task 3.1",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Interpreting the ablation 1 result",
+      "prompt": "In my ablation where lambda=infinity, DP-means finds k=1 and inertia increases 54x. How should I interpret this in terms of what it reveals about the paper's contribution?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Framed the result as isolating the lambda-threshold as the entire mechanism behind k discovery.",
+      "student_verification": "Connected the interpretation to the Bayesian meaning of lambda as described in Section 3 of the paper.",
+      "confidence_level": 5,
+      "task_tag": "Task 3.1",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Interpreting the ablation 2 result",
+      "prompt": "In my single-pass ablation, DP-means finds k=8 instead of 4 and inertia is 5x higher. Why does removing center updates cause over-clustering?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Explained that stale centers cause spurious new-cluster creation because distance to displaced centers exceeds lambda.",
+      "student_verification": "Verified by tracing through the first iteration manually with the initial center positions.",
+      "confidence_level": 4,
+      "task_tag": "Task 3.1",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 2,
+      "prompt": "In my ablation where lambda=infinity, DP-means finds k=1 and inertia increases 54x. How should I interpret this in terms of what it reveals about the paper's contribution?",
+      "why_important": "Ablation interpretation is worth 6 of 10 marks per component \u2014 framing the result in terms of the paper's claims was critical."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 3,
+      "prompt": "In my single-pass ablation, DP-means finds k=8 instead of 4 and inertia is 5x higher. Why does removing center updates cause over-clustering?",
+      "why_important": "The unexpected over-clustering result needed a clear mechanistic explanation connecting back to Algorithm 1."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 1,
+      "prompt": "What are the two most important components of DP-means from Algorithm 1 to ablate, and how should I implement each ablation independently?",
+      "why_important": "Choosing ablations that are independent, interpretable, and tied to the paper required careful planning."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this task.",
+    "understanding_acknowledged": true,
+    "signature": "ARYAN SONI",
+    "date": "2026-03-12"
+  }
+}

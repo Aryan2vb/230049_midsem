@@ -1,0 +1,90 @@
+{
+  "student_metadata": {
+    "name": "ARYAN SONI",
+    "roll_number": "230049",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-12"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "provider": "Anthropic"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Translating Algorithm 1 into Python",
+      "prompt": "Help me implement DP-means from Algorithm 1 in Kulis & Jordan 2012 in Python from scratch, with comments citing the exact algorithm line numbers.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Provided an initial implementation structure which I then verified against Algorithm 1 line by line.",
+      "student_verification": "Compared every code block to Algorithm 1 in the paper and rewrote comments to match exact line numbers.",
+      "confidence_level": 4,
+      "task_tag": "Task 2.2",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Choosing lambda value",
+      "prompt": "How should I choose the lambda value for DP-means on a make_blobs dataset with 4 clusters and cluster_std=0.8? What range should I scan?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Suggested scanning lambda over an order of magnitude and choosing smallest value that recovers true k.",
+      "student_verification": "Ran the scan myself (lambda from 1.5 to 50) and confirmed lambda=15 is the right choice empirically.",
+      "confidence_level": 5,
+      "task_tag": "Task 2.2",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Writing paper-annotation markdown cells",
+      "prompt": "For each code block in my DP-means implementation, help me write a 2-3 sentence markdown annotation that cites the specific equation or algorithm step from the paper.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Drafted initial annotations which I then edited to be more specific to Algorithm 1 line numbers.",
+      "student_verification": "Revised every annotation by re-reading the paper section it references.",
+      "confidence_level": 3,
+      "task_tag": "Task 2.2",
+      "code_used_verbatim": false,
+      "student_modification": "Rewrote all annotations in my own words with more specific paper references."
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 2,
+      "prompt": "How should I choose the lambda value for DP-means on a make_blobs dataset with 4 clusters and cluster_std=0.8? What range should I scan?",
+      "why_important": "Lambda selection is the key practical decision in DP-means reproduction \u2014 getting it wrong would affect all downstream results."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 1,
+      "prompt": "Help me implement DP-means from Algorithm 1 in Kulis & Jordan 2012 in Python from scratch, with comments citing the exact algorithm line numbers.",
+      "why_important": "The core implementation required careful alignment with Algorithm 1 \u2014 this interaction helped structure the code."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 3,
+      "prompt": "For each code block in my DP-means implementation, help me write a 2-3 sentence markdown annotation that cites the specific equation or algorithm step from the paper.",
+      "why_important": "Annotations are worth 20 marks in Task 2.2 \u2014 getting them specific and accurate was critical."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this task.",
+    "understanding_acknowledged": true,
+    "signature": "ARYAN SONI",
+    "date": "2026-03-12"
+  }
+}

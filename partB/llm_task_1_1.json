@@ -1,0 +1,90 @@
+{
+  "student_metadata": {
+    "name": "ARYAN SONI",
+    "roll_number": "230049",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-12"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "provider": "Anthropic"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Understanding Algorithm 1 step structure",
+      "prompt": "Can you walk me through Algorithm 1 in the Kulis & Jordan 2012 DP-means paper step by step, citing the line numbers and what each line computes?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Clarified the role of each line in Algorithm 1, especially the convergence check.",
+      "student_verification": "Cross-checked each step against Algorithm 1 in the paper PDF and verified line numbers match.",
+      "confidence_level": 4,
+      "task_tag": "Task 1.1",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Understanding the purpose of lambda",
+      "prompt": "What is the Bayesian interpretation of the lambda parameter in DP-means and how does it relate to the Dirichlet Process concentration parameter?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Explained that lambda is the penalty for spawning a new cluster, analogous to alpha in the DP prior.",
+      "student_verification": "Verified by reading Section 3 of the paper where lambda is introduced and its derivation traced.",
+      "confidence_level": 5,
+      "task_tag": "Task 1.1",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Phrasing the final summary sentence",
+      "prompt": "Write a single sentence that captures both what problem DP-means solves and what makes it better than k-means, without copying from the paper.",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Provided a draft sentence that I refined to match my own understanding.",
+      "student_verification": "Rewrote in my own words and confirmed it matches the paper's abstract and Section 3.",
+      "confidence_level": 3,
+      "task_tag": "Task 1.1",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 2,
+      "prompt": "What is the Bayesian interpretation of the lambda parameter in DP-means and how does it relate to the Dirichlet Process concentration parameter?",
+      "why_important": "Understanding lambda's Bayesian justification is central to explaining why DP-means is more principled than ad-hoc k-selection."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 1,
+      "prompt": "Can you walk me through Algorithm 1 in the Kulis & Jordan 2012 DP-means paper step by step, citing the line numbers and what each line computes?",
+      "why_important": "Needed to verify my reading of Algorithm 1 before writing the step-by-step description."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 3,
+      "prompt": "Write a single sentence that captures both what problem DP-means solves and what makes it better than k-means, without copying from the paper.",
+      "why_important": "The summary sentence synthesises the whole task and must be precise \u2014 getting the framing right mattered."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this task.",
+    "understanding_acknowledged": true,
+    "signature": "ARYAN SONI",
+    "date": "2026-03-12"
+  }
+}

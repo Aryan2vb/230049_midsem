@@ -1,0 +1,111 @@
+{
+  "student_metadata": {
+    "name": "ARYAN SONI",
+    "roll_number": "230049",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-12"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "provider": "Anthropic"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Identifying the spherical cluster assumption",
+      "prompt": "In DP-means, why does using squared Euclidean distance imply an isotropic Gaussian cluster assumption? Which equation in the paper does this come from?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Linked Euclidean distance to Eq. 9 and explained that Voronoi partitions only correspond to spherical Gaussians.",
+      "student_verification": "Verified by re-reading Eq. 9 and Section 4's derivation \u2014 confirmed the covariance is sigma^2 I.",
+      "confidence_level": 5,
+      "task_tag": "Task 1.2",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Identifying the global lambda assumption",
+      "prompt": "What assumption does a single global lambda make about the clusters in the dataset, and when would this assumption fail?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Articulated the uniform density/scale assumption and suggested a mixed-scale cluster dataset as a violation.",
+      "student_verification": "Checked Section 3 of the paper \u2014 no per-cluster lambda is defined, confirming this is a real assumption.",
+      "confidence_level": 4,
+      "task_tag": "Task 1.2",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Identifying the small-variance assumption",
+      "prompt": "What does sigma squared going to zero assume about cluster overlap in the DP-means derivation, and when would this break down?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Explained that hard assignments are only valid when clusters are well-separated relative to their variance.",
+      "student_verification": "Located Theorem 1 in Section 4 and confirmed the sigma^2 -> 0 limit is the formal basis of the algorithm.",
+      "confidence_level": 5,
+      "task_tag": "Task 1.2",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    },
+    {
+      "interaction_id": 4,
+      "date": "2026-03-12",
+      "tool_name": "Claude",
+      "model": "claude-opus-4-6",
+      "purpose": "Finding paper references for each assumption",
+      "prompt": "For each of the three DP-means assumptions (spherical clusters, global lambda, small-variance asymptotics), what is the most specific section, equation, or theorem in the Kulis Jordan 2012 paper that supports each assumption?",
+      "llm_response_used": "Partially",
+      "how_it_helped": "Identified Eq. 9 for assumption 1, Section 3 for assumption 2, and Theorem 1 Section 4 for assumption 3.",
+      "student_verification": "Verified each reference by locating the corresponding passage in the paper.",
+      "confidence_level": 4,
+      "task_tag": "Task 1.2",
+      "code_used_verbatim": false,
+      "student_modification": "N/A"
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "In DP-means, why does using squared Euclidean distance imply an isotropic Gaussian cluster assumption? Which equation in the paper does this come from?",
+      "why_important": "This was the most technically precise assumption and required understanding the link between Euclidean distance and Gaussian covariance."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 3,
+      "prompt": "What does sigma squared going to zero assume about cluster overlap in the DP-means derivation, and when would this break down?",
+      "why_important": "The small-variance assumption is the deepest assumption in the paper and required tracing the derivation in Section 4."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 2,
+      "prompt": "What assumption does a single global lambda make about the clusters in the dataset, and when would this assumption fail?",
+      "why_important": "Practical violation scenarios for lambda uniformity are important for Part C questions about real-world limitations."
+    },
+    {
+      "rank": 4,
+      "interaction_id": 4,
+      "prompt": "For each of the three DP-means assumptions (spherical clusters, global lambda, small-variance asymptotics), what is the most specific section, equation, or theorem in the Kulis Jordan 2012 paper that supports each assumption?",
+      "why_important": "Ensuring every assumption has a traceable paper reference is required by the exam rubric."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for this task.",
+    "understanding_acknowledged": true,
+    "signature": "ARYAN SONI",
+    "date": "2026-03-12"
+  }
+}
